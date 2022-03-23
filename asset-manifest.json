@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-Fossils-Simulation/static/css/main.6e92d9e8.css",
+    "main.js": "/React-Fossils-Simulation/static/js/main.84a24db0.js",
+    "static/js/787.0f3273df.chunk.js": "/React-Fossils-Simulation/static/js/787.0f3273df.chunk.js",
+    "static/media/main_bg.png": "/React-Fossils-Simulation/static/media/main_bg.dcf4946d7ea44414c4cb.png",
+    "static/media/stingray_fossils.png": "/React-Fossils-Simulation/static/media/stingray_fossils.01f564bb5f6ce7b46ade.png",
+    "static/media/spider_fossils.png": "/React-Fossils-Simulation/static/media/spider_fossils.bdae02bc8170828499f4.png",
+    "static/media/coyete_tracks.png": "/React-Fossils-Simulation/static/media/coyete_tracks.b69a90ad82b7bb35fd99.png",
+    "static/media/pottery.png": "/React-Fossils-Simulation/static/media/pottery.a7ae760d2b4e399ca9d7.png",
+    "static/media/tisapro-medi.woff": "/React-Fossils-Simulation/static/media/tisapro-medi.a80794f12216babe97d2.woff",
+    "static/media/rock_layers.png": "/React-Fossils-Simulation/static/media/rock_layers.c7bb5d53039a383a1f83.png",
+    "static/media/reset_icon.svg": "/React-Fossils-Simulation/static/media/reset_icon.4b45e9d79d1b252a6aa3.svg",
+    "static/media/info_icon.svg": "/React-Fossils-Simulation/static/media/info_icon.df3fcc0805783baa32cb.svg",
+    "static/media/attention_icon.svg": "/React-Fossils-Simulation/static/media/attention_icon.0c2002d442553a4556d3.svg",
+    "static/media/next_arrow_icon.svg": "/React-Fossils-Simulation/static/media/next_arrow_icon.f1ba92b96735f374e3a3.svg",
+    "index.html": "/React-Fossils-Simulation/index.html",
+    "main.6e92d9e8.css.map": "/React-Fossils-Simulation/static/css/main.6e92d9e8.css.map",
+    "main.84a24db0.js.map": "/React-Fossils-Simulation/static/js/main.84a24db0.js.map",
+    "787.0f3273df.chunk.js.map": "/React-Fossils-Simulation/static/js/787.0f3273df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e92d9e8.css",
+    "static/js/main.84a24db0.js"
+  ]
+}
