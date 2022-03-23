@@ -1,0 +1,1211 @@
+@font-face {
+  font-family: Tisapro;
+  src: url(tisapro-medi.woff);
+}
+
+/* ----------------------------------loader styling------------------------------------------- */
+
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* -----------------------------------Initial Html layout styling------------------------------ */
+
+.container {
+  font-family: Tisapro;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  background-size: contain;
+}
+
+.inner-container{
+  position: absolute; 
+  left: 295px;
+  width: 800px;
+  height: 600px;
+  transform: scale(1.19,1.189);
+  transform-origin: top left;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.content-section{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------styling scrollbar---------------------------------------  */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 18px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-button{
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-corner{
+  background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  background-clip: padding-box;
+  border: 3px solid rgbs(0, 0, 0, 0);
+  background-color:rgba(0,0,0,0.55);
+  box-shadow: inset -1px -1px 0px rgb(0 0 0 / 5%), inset 1px 1px 0px rgb(0 0 0 / 5%);
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #352103;
+}
+
+/* --------------Starting Popup Background which will blur the remaining area ------------------------*/
+
+.popup-background{
+  width: 97%;
+  height: 79.5%;
+  position: absolute;
+  z-index: 2;
+  top: 121px;
+  display: flex;
+  background-color: black;
+  opacity: 0;
+  animation: popup-background 0s 0.5s forwards;
+  animation-name: popup-background;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popup-background {
+  from{opacity: 0.3;}
+  to{opacity: 0.3;}  
+}
+
+
+/* ------------------------------------Starting Popup Info Section-------------------------------------- */
+
+.start-popup-button{
+  background-color: #352103;
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.start-popup-button .text{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+  margin-right: 8px;
+  margin-left: 4px;
+  font-weight: bold;
+  display: block;
+  pointer-events: auto;
+}
+
+.start-popup-button .icon{
+  display: block;
+  background: url(./assets/images/next_arrow_icon.svg);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.start-popup-button:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+/* -------------left content area in which we click the fossils button to know about them-------------- */
+
+.left-content{
+  position: relative;
+  width: 538px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --------------------main background image of the left content side------------------ */
+
+.main-image{
+  background-image:url('./assets/images/main_bg.png') ;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Styling of all the fossils buttons present on the main background image on left content side */
+
+#tarantula, #rocklayers, #coyote, #stingray, #pottery{
+  width: 4px;
+  height: 4px;
+  padding: 2px;
+  transition: all 0.5s;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  border: 6px solid #ff3366;
+  box-shadow: 0 0 0 4px rgb(255 51 102 / 24%), 0 0 0 8px rgb(255 51 102 / 16%) !important;
+  max-width: 66px;
+  max-height: 66px;
+  justify-content: center;
+  display: block;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#tarantula:hover:not(focus){
+  outline-color: #ff3366;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 11px;
+}
+
+#rocklayers:hover:not(focus){
+  outline-color: #ff3366;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 11px;
+}
+
+#coyote:hover:not(focus){
+  outline-color: #ff3366;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 11px;
+}
+
+#stingray:hover:not(focus){
+  outline-color: #ff3366;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 11px;
+}
+
+#pottery:hover:not(focus){
+  outline-color: #ff3366;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 11px;
+}
+
+#stingray:focus{
+  outline-color: #ff3366;
+  padding: 8px;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-offset: 16px;
+}
+
+#pottery:focus{
+  outline-color: #ff3366;
+  padding: 8px;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-offset: 16px;
+}
+
+#rocklayers:focus{
+  outline-color: #ff3366;
+  outline-width: 3px;
+  padding: 8px;
+  outline-style: solid;
+  outline-offset: 16px;
+}
+
+#tarantula:focus{
+  outline-color: #ff3366;
+  outline-width: 3px;
+  padding: 8px;
+  outline-style: solid;
+  outline-offset: 16px;
+}
+
+#coyote:focus{
+  outline-color: #ff3366;
+  outline-width: 3px;
+  padding: 8px;
+  outline-style: solid;
+  outline-offset: 16px;
+}
+
+
+.tarantula-fossil{
+  top: 142px;
+  left: 322px;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+}
+
+.rocklayers-fossil{
+  top: 207px;
+  left: 247px;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stingray-fossil{
+  left: 49px;
+  top: 322px;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.coyote-fossil{
+  top: 402px;
+  left: 475px;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.pottery-fossil{
+  top: 477px;
+  left: 282px;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+/* --------------------------Reset Section Styling on header--------------------------------- */
+
+.reset{
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  height: 55px;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-left: 10px;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.reset-button{
+  width: 105px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  pointer-events: auto;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.reset-image{
+  background-image: url(./assets/images/reset_icon.svg);
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.reset-text{
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  display: block;
+  pointer-events: none;
+}
+
+.reset-button:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+/* ------------------------Reset Button popup when reset button is clicked----------------------- */
+
+.reset-popup{
+  margin-top: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.reset-button-no{
+  background-color:#fbf1e9;;
+  border: 2px solid black;  
+  margin-right: 16px;
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.reset-button-no .text{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-weight: bold;
+  display: block;
+  pointer-events: none;
+}
+
+.reset-button-no .icon{
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.reset-button-no:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+.reset-button-yes{
+  background-color: #352103;
+  border: 2px solid black;  
+  margin-right: 16px;
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.reset-button-yes .text{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-weight: bold;
+  display: block;
+  pointer-events: none;
+}
+
+.reset-button-yes .icon{
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.reset-button-yes:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+/* ----------------------------info section button styling on header----------------- */
+
+.info-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-left: 8px;
+  margin-right: 25px;
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.info-image{
+  background-image: url(./assets/images/info_icon.svg);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  pointer-events: none;
+}
+
+.info-button:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+/* ----------------------------info section popup when info button is clicked---------------------------*/
+
+.info-container{
+  background-color:#fbf1e9;
+  box-shadow: inset 0 -2px 0 0 #ba5b08;
+  width: 82%;
+  z-index: 2;
+  position: absolute;
+  pointer-events: auto;
+  padding: 16px 60px 24px 60px;
+  display: flex;
+  opacity: 0;
+  flex-direction: row;
+  animation:  reset 0.5s 1s forwards;
+}
+
+@keyframes reset{
+  from{top: -120px;}
+  to{top: 0px;}
+  from{opacity: 1;}
+  to{opacity: 1;}
+}
+
+.info-container>div{
+  position: relative;
+}
+
+.info-container>div:first-child span{
+  background-image: url(./assets/images/attention_icon.svg);
+  width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.info-container>div:nth-child(2){
+  margin-left: 12px;
+  margin-top: 1px;
+}
+
+.info-container>div:nth-child(2) p{
+  text-align: left;
+  color: #352103;
+  font-weight: 400;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  letter-spacing: 0.15px;
+  font-variant: lining-nums;
+}
+
+.info-popup-close{
+  margin-top: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.info-popup-close-button{
+  background-color: #352103;
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.info-popup-close-button .text{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-weight: bold;
+  display: block;
+  pointer-events: auto;
+}
+
+.info-popup-close-button .icon{
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.info-popup-close-button:hover{
+  outline-color: white;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 0 1.6px rgb(49,49,49);
+}
+
+/* ----------Right side paragraph which tells us what to doin this activity------------------------ */
+
+.right-content{
+  position: relative;
+  width: 260px;
+  height: 100%;
+  overflow: hidden;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.top-right-content{
+  position: relative;
+  margin-top: 70px;
+  margin-right: 20px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+}
+
+.top-right-content-text h1{
+  color: #052978;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-align: left;
+}
+
+ /* ---------------------------Fossils Info Section Layout Styling--------------------------------------- */
+
+.fossils-info{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex :1;
+}
+
+.fossils-info>div{
+  margin-top: 16px;
+  border-radius: 8px;
+  background-color: #fbf1e9;
+  border: 1px solid #ba5b08;
+  width: 93%;
+  position: relative;
+  padding: 8px 12px;
+  overflow: hidden;
+  padding-right: 0px;
+}
+
+.fossils-info>div>div{
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 395px;
+  padding-right: 12px;
+}
+
+/* ---------------------------------Tarantula Fossil Info------------------------------------- */
+
+.tarantula-image{
+  width: 188px;
+  height: 141px;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/spider_fossils.png);
+}
+
+.tarantula-content1{
+  margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.tarantula-content{
+  font-size: 14px;
+  margin: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.tarantula-content-heading{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #352103;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.tarantula-types{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarantula-types li{
+  font-size: 12px;
+  color: #352103;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.tarantula-types li span{
+  width: 16px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarantula-types li span span{
+  width: 4px;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #352103;
+}
+
+.tarantula-types li p{
+  width: calc(100% - 16px);
+  margin: 0;
+  text-align: left;
+}
+
+/* ----------------------------- fossil info close button---------------------------------------- */
+
+.close-button{
+  margin: 0;
+  margin-top: 16px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 6px 16px;
+  float: right;
+  position: relative;
+  pointer-events: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  outline: none;
+}
+
+.close-button .text{
+  color: black;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  margin: 0;
+  font-weight: bold;
+  display: block;
+  pointer-events: none;
+}
+
+.close-button .icon{
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.close-button:hover{
+  background-color: #ba5b08;
+}
+
+/*----------------------------------------- Rocklayer Fossil Info---------------------------------- */
+
+.rocklayers-image{
+  overflow: hidden;
+  width: 188px;
+  height: 141px;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/rock_layers.png);  
+}
+
+.rocklayers-image-content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.rocklayers-image-content p{
+  font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.rocklayers-image-content p:nth-child(1){
+  top: -5px;
+  left: 120px;
+}
+
+.rocklayers-image-content p:nth-child(2){
+  top: 20px;
+  left: 120px;
+}
+
+.rocklayers-image-content p:nth-child(3){
+  top: 48px;
+  left: 120px;
+}
+
+.rocklayers-image-content p:nth-child(4){
+  top: 71px;
+  left: 120px;
+}
+
+.rocklayers-image-content p:nth-child(5){
+  top: 98px;
+  left: 120px;
+}
+
+.rocklayers-content1{
+  margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.rocklayers-content{
+  font-size: 14px;
+  color: #352103;
+  text-align: left;
+  margin: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.rocklayers-content-heading{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #352103;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.rocklayers-types{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rocklayers-types li{
+  font-size: 12px;
+  color: #352103;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.rocklayers-types li span{
+  margin-right: 5px;
+  margin-top: 2px;
+  width: 16px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rocklayers-types li:nth-child(1) span span{
+  background-image: url(./assets/images/hundred_meter_layer.png);
+}
+
+.rocklayers-types li:nth-child(2) span span{
+  background-image: url(./assets/images/fifty_meter_layer.png);
+}
+
+.rocklayers-types li:nth-child(3) span span{
+  background-image: url(./assets/images/ten_meter_layer.png);
+}
+
+.rocklayers-types li:nth-child(4) span span{
+  background-image: url(./assets/images/ground_layer.png);
+}
+
+.rocklayers-types li span span{
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;  
+  border-radius: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rocklayers-types li p{
+  width: calc(100% - 16px);
+  margin: 0;
+  text-align: left;
+}
+
+/* ---------------------Stingray Fossil Info----------------------------------------- */
+
+.stingray-image{
+  width: 188px;
+  height: 141px;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/stingray_fossils.png);
+}
+
+.stingray-content1{
+  margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.stingray-content{
+  font-size: 14px;
+  margin: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.stingray-content-heading{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #352103;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.stingray-types{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stingray-types li{
+  font-size: 12px;
+  color: #352103;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.stingray-types li span{
+  width: 16px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stingray-types li span span{
+  width: 4px;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #352103;
+}
+
+.stingray-types li p{
+  width: calc(100% - 16px);
+  margin: 0;
+  text-align: left;
+}
+
+/* --------------------------------------Coyote Tracks Fossils Info----------------------------- */
+
+.coyote-image{
+  width: 188px;
+  height: 141px;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/coyete_tracks.png);
+}
+
+.coyote-content1{
+  margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.coyote-content{
+  font-size: 14px;
+  margin: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.coyote-content-heading{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #352103;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.coyote-types{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coyote-types li{
+  font-size: 12px;
+  color: #352103;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.coyote-types li span{
+  width: 16px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coyote-types li span span{
+  width: 4px;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #352103;
+}
+
+.coyote-types li p{
+  width: calc(100% - 16px);
+  margin: 0;
+  text-align: left;
+}
+
+/* ---------------------------------------Pottery fossils info------------------------------------ */
+
+.pottery-image{
+  width: 188px;
+  height: 141px;
+  background: none;
+  border-radius: 4px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/pottery.png);
+}
+
+.pottery-content1{
+  margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.pottery-content{
+  font-size: 14px;
+  margin: 0;
+  color: #352103;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.pottery-content-heading{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #352103;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-variant: lining-nums;
+}
+
+.pottery-types{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pottery-types li{
+  font-size: 12px;
+  color: #352103;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.pottery-types li span{
+  width: 16px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pottery-types li span span{
+  width: 4px;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #352103;
+}
+
+.pottery-types li p{
+  width: calc(100% - 16px);
+  margin: 0;
+  text-align: left;
+}
